@@ -14,9 +14,9 @@
   "author": "Sumbal Ijaz",
   "type": "module",
   "scripts": {
-    "test": "Jest",
-    "start": "npx parcel index.html",
-    "build": "npx parcel build index.html"
+   "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.28.3",
