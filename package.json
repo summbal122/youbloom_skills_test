@@ -13,11 +13,11 @@
   "license": "ISC",
   "author": "Sumbal Ijaz",
   "type": "commonjs",
-  "scripts": {
-   "test": "jest",
-    "start": "npx parcel index.html",
-    "build": "parcel build index.html"
-  },
+"scripts": {
+  "test": "jest",
+  "start": "npx parcel index.html",
+  "build": "parcel build index.html --dist-dir dist"
+},
   "devDependencies": {
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
