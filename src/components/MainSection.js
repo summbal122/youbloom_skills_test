@@ -1,6 +1,6 @@
 import useFetchData from "../utils/useFetchData"
 import { useSelector } from "react-redux";
-import ItemCard from "./itemCard";
+import ItemCard from "./ItemCard"
 import { useState } from "react";
 import Header from "./Header";
 
