@@ -5,6 +5,7 @@ import Body from "./components/Body"
 import { Provider } from "react-redux";
 import appStore from "./store/appStore";
 import ItemDetails from "./components/ItemDetails";
+import ProtectedRoute from "./ProtectedRoute";
 const AppLayout = () => { 
   return(
     <div>
@@ -20,14 +21,22 @@ const AppLayout = () => {
       children: [
         {
           path: "/",
-          element: <MainSection />
+          element: (
+          <ProtectedRoute>
+             <MainSection />
+          </ProtectedRoute>
+          )
         },
         {
           path: "/login",
           element: <Login />
         }, {
           path: "/itemDetails/:id",
-          element: <ItemDetails />
+          element:  (
+          <ProtectedRoute>
+             <ItemDetails/>
+          </ProtectedRoute>
+          )
         }
       ]
     }

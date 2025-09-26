@@ -3,20 +3,19 @@ import { useSelector } from "react-redux";
 import ItemCard from "./ItemCard"
 import { useState } from "react";
 import Header from "./Header";
+import MainSectionShimmer from "../Shimmer/MainSectionShimmer";
 
-const MainSection = () => {
+  const MainSection = () => {
   useFetchData();
   const items = useSelector((store) => store.items.items);
   console.log(items)
   const [query, setQuery] = useState("");
-  if (items.length === 0) return "no data"
+  if (items.length === 0) return <MainSectionShimmer />
    const filteredItems = items.filter((item) =>
     item.title.toLowerCase().includes(query.toLowerCase())
   );
   const handleSearch = (e)=> {
     setQuery(e.target.value)
-
-
   }
   return (
     <main className="h-screen flex flex-col overflow-y-scroll">
@@ -38,7 +37,7 @@ const MainSection = () => {
                 </div>
               ))
             ) : (
-              <p className="text-red-800 text-center text-sm tracking-wide ">No suggestions found</p>
+         <p className="text-red-800 text-center text-sm tracking-wide ">No suggestions found</p>
             )}
       </div>
       </div>
