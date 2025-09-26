@@ -8,7 +8,6 @@ import MainSectionShimmer from "../Shimmer/MainSectionShimmer";
   const MainSection = () => {
   useFetchData();
   const items = useSelector((store) => store.items.items);
-  console.log(items)
   const [query, setQuery] = useState("");
   if (items.length === 0) return <MainSectionShimmer />
    const filteredItems = items.filter((item) =>
@@ -31,13 +30,13 @@ import MainSectionShimmer from "../Shimmer/MainSectionShimmer";
       <div className="w-full lg:w-9/12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
         {filteredItems.length > 0 ? (
               filteredItems.map((item) => (
-                <div key={item.id}>
-                  <ItemCard item={item} />
-                  <hr className="text-gray-200" />
+            <div key={item.id}>
+             <ItemCard item={item} />
+             <hr className="text-gray-200" />
                 </div>
               ))
             ) : (
-         <p className="text-red-800 text-center text-sm tracking-wide ">No suggestions found</p>
+         <p className="text-red-800 text-center text-sm font-thin tracking-wide ">No suggestions found</p>
             )}
       </div>
       </div>

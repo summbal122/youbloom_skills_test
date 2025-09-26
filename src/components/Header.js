@@ -13,11 +13,11 @@ const Header = () => {
     <header className="w-full py-3 px-6 md:px-15 shadow-sm font-serif">
       <nav className="flex justify-between items-center" >
         <ul className="flex gap-3 md:gap-8 font-thin text-xs md:text-sm text-gray-600">
-        <li className="hover:text-red-900 hover:cursor-pointer"><Link to="/">Home</Link></li>
-        <li className="hover:text-red-900 hover:cursor-pointer">About</li>
-        <li className="hover:text-red-900 hover:cursor-pointer">Blogs</li>
-        <li className="hover:text-red-900 hover:cursor-pointer">Contact</li>
-        <li className="hover:text-red-900 hover:cursor-pointer">Stories</li>
+        <li data-testid="nav-item" className="hover:text-red-900 hover:cursor-pointer"><Link to="/">Home</Link></li>
+        <li data-testid="nav-item" className="hover:text-red-900 hover:cursor-pointer">About</li>
+        <li data-testid="nav-item" className="hover:text-red-900 hover:cursor-pointer">Blogs</li>
+        <li data-testid="nav-item" className="hover:text-red-900 hover:cursor-pointer">Contact</li>
+        <li data-testid="nav-item" className="hover:text-red-900 hover:cursor-pointer">Stories</li>
         </ul>
 
         <button onClick={handleLogout} className="bg-red-900 text-white px-3 md:px-7 py-1 md:py-2 tracking-wider rounded-lg text-xs md:text-sm">Logout</button>

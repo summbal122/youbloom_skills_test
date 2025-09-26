@@ -5,7 +5,7 @@ const MainSectionShimmer = () => {
     <div className="h-screen">
       <div className="w-full h-18 bg-gray-100">
       </div>
-    
+
     <div className="flex justify-center items-center mt-10 p-4">
       <p className="h-15 bg-gray-100 w-full md:w-6/12 mt-5 text-center rounded-md "></p>
     </div>
