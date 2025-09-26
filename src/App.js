@@ -2,6 +2,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainSection from "./components/MainSection"
 import Login from "./components/Login"
 import Body from "./components/Body"
+import { Provider } from "react-redux";
+import appStore from "./store/appStore";
+import ItemDetails from "./components/ItemDetails";
 const AppLayout = () => { 
   return(
     <div>
@@ -22,15 +25,21 @@ const AppLayout = () => {
         {
           path: "/login",
           element: <Login />
+        }, {
+          path: "/itemDetails/:id",
+          element: <ItemDetails />
         }
       ]
     }
   ])
 
-
 const App = () => {
   return(
-    <RouterProvider router={appRouter} ></RouterProvider>
+     <Provider store={appStore}>
+      <RouterProvider router={appRouter} ></RouterProvider>
+     </Provider>
+      
+    
   )
 }
 
