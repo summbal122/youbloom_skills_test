@@ -42,4 +42,9 @@ npm test
 
 ## Screenshots
 
+![alt text](/screenshots/image1.png)
+![alt text](/screenshots/image2.png)
+![alt text](/screenshots/image3.png)
+
+
 
