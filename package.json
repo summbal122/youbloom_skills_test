@@ -12,10 +12,10 @@
   },
   "license": "ISC",
   "author": "Sumbal Ijaz",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
    "test": "jest",
-    "start": "parcel index.html",
+    "start": "npx parcel index.html",
     "build": "parcel build index.html"
   },
   "devDependencies": {
